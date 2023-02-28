@@ -6,30 +6,15 @@
     <button>
       Press me
     </button>
-    <div>Get groceries</div>
-    <div>Wash car</div>
-    <div>Make dinner</div>
     <script>
-      let todo1 = 'Get groceries';
-      let todo2 = 'Wash car';
-      let todo3 = 'Make dinner';
-      let text1 = 'Click Me';
+      let todos = ['Get groceries', 'Wash car', 'Make dinner'];
+      todos.push('another todo');
 
-      let element = document.createElement('div');
-      element.innerText = todo3;
-      document.body.appendChild(element);
-
-      element = document.createElement('div');
-      element.innerText = todo2;
-      document.body.appendChild(element);
-
-      element = document.createElement('div');
-      element.innerText = todo1;
-      document.body.appendChild(element);
-
-      element = document.createElement('button');
-      element.innerText = text1;
-      document.body.appendChild(element);
+      todos.forEach(function (todoTitle) {
+        let element = document.createElement('div');
+        element.innerText = todoTitle;
+        document.body.appendChild(element);
+      });
 
       document.title = "newTitle"
 

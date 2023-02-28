@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+
+      function toUpper (params) {
+        let newList = [];
+
+        params.forEach(function(x) {
+          newList.push(x.toUpperCase())
+
+        });
+        
+        console.log(newList)
+      }
+        
+
+      toUpper(['hello', 'world']);
+
+      function arrayDouble (stringArr){
+        let result = [];
+
+        stringArr.forEach(function(str){
+          result.push(str);
+          result.push(str);
+        })
+
+        console.log(result)
+      }
+
+      arrayDouble(['bark', 'meow']);
+
+      function arraySum (arrNum) {
+        let sum = 0;
+
+        arrNum.forEach(function (num) {
+          sum = sum + num
+
+        });
+
+        console.log(sum);
+      }
+
+      arraySum([5, -2, 7, 0]);
+
+    </script>
+  </body>
+</html>
