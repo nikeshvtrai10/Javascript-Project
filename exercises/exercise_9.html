@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <button onclick="addItem('Apple')">Apple</button>
+    <button onclick="addItem('Tomato')">Tomato</button>
+    <button onclick="addItem('Eggs')">Eggs</button>
+    <button onclick="clearCart()">Clear</button>
+    <div id='cart'></div>
+
+    <input type="text" id="measurement">
+    <button onclick="toCM()">Convert to cm</button>
+    <button onclick="toInch()">Convert to inch</button>
+    <div id="result"></div>
+
+    <script>
+      const cart = document.getElementById('cart');
+
+      function addItem(food) {
+        const cartItem = document.createElement('div');
+        cartItem.innerText = food;
+        cart.appendChild(cartItem);
+      }
+
+      function clearCart() {
+        cart.innerHTML = '';
+      }
+
+      
+      const measurement = document.getElementById('measurement');
+
+      function toCM(){
+        const value = measurement.value;
+
+        const convertedValue = +value * 2.54;
+
+        const result = document.createElement('div');
+        result.innerText = convertedValue;
+        document.body.appendChild(result);
+      }
+
+      function toInch() {
+        const value = measurement.value
+
+        const convertedValue = +value / 2.54;
+
+        const result = document.createElement('div');
+        result.innerText = convertedValue;
+        document.body.appendChild(result);
+      }
+
+    </script>
+  </body>
+</html>
