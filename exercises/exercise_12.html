@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      
+      function upperCase(str){
+        return str.toUpperCase();
+      }
+
+      const name = upperCase('dick');
+      console.log(name);
+
+      function aboveFreezing(arrayNum) {
+
+        const tempsAbove = arrayNum.filter(function (temp){
+          return temp > 32;
+        });
+
+        return tempsAbove;
+
+      }
+
+      const temps = aboveFreezing([0, -1, 50, 100, -2]);
+      console.log(temps);
+
+      function removeRed(objs){
+
+        const food = objs.filter(function(obj){
+          return obj.color != 'red'
+        });
+
+        return food;
+      }
+
+      const result = removeRed([{name: 'Apple', color: 'red'}, {name: 'Egg', color: 'white'}]);
+      console.log(result);
+
+
+    </script>
+  </body>
+</html>
