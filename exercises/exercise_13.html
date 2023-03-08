@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function max(arrNum){
+        let temp = 0;
+        arrNum.forEach(function(num){
+          if (num > temp){
+            temp = num;
+          }
+        });
+        return temp;
+      }
+
+      const largest = max([1, 5, -2, 4, 3, 5, 0]);
+      console.log(largest);
+
+      function min(numArr){
+        let min = 0;
+
+        numArr.forEach(function(number){
+          if (number < min) {
+            min = number;
+          }
+        });
+
+        return min;
+      }
+
+      const smallest = min([1, 5, -2, 4, 3, 5, 0]);
+      console.log(smallest);
+
+    </script>
+  </body>
+</html>
