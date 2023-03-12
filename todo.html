@@ -15,10 +15,11 @@
       let todos;
 
       // Retrieve local storage
-      const savedTodos = localStorage.getItem('todos');
+      const savedTodos = JSON.parse(localStorage.getItem('todos'));
 
-      if () {
-
+      // Check if it's an array
+      if (Array.isArray(savedTodos)) {
+        todos = savedTodos;
       } else {
         todos = [{
           title: 'Get groceries',
